@@ -16,10 +16,10 @@ export default function Header(props) {
         }
     }
     useEffect(async () => {
-        const articlesresponse = await fetch("http://localhost:3000/api/articles");
+        const articlesresponse = await fetch("https://610510704b92a000171c5dfc.mockapi.io/articles");
         const articlesdata = await articlesresponse.json();
         setArticlelist(articlesdata);
-        const tutorialsresponse = await fetch("http://localhost:3000/api/tutorials");
+        const tutorialsresponse = await fetch("https://610510704b92a000171c5dfc.mockapi.io/tutorials");
         const tutorialsdata = await tutorialsresponse.json();
         setTutoriallist(tutorialsdata);
     }, [])

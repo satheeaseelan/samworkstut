@@ -29,7 +29,7 @@ function TutorialsDetails({tutorial}) {
 }
 export default TutorialsDetails;
 export async function getStaticPaths() {
-    const response = await fetch("http://localhost:3000/api/tutorials");
+    const response = await fetch("https://610510704b92a000171c5dfc.mockapi.io/tutorials");
     const data = await response.json();
     const paths = data.map(tutorial => {
         return {
@@ -45,7 +45,7 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps(context) {
     const {params} = context
-    const response = await fetch(`http://localhost:3000/api/tutorials/${params.tutorialId}`);
+    const response = await fetch(`https://610510704b92a000171c5dfc.mockapi.io/tutorials/${params.tutorialId}`);
     const data = await response.json();
     return {
         props: {

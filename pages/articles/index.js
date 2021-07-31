@@ -28,7 +28,7 @@ export default function Articles({ articles }) {
     </div>)
 }
 export async function getStaticProps() {
-    const response = await fetch("http://localhost:3000/api/articles");
+    const response = await fetch("https://610510704b92a000171c5dfc.mockapi.io/articles");
     const data = await response.json();
     return {
         props: {

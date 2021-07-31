@@ -26,7 +26,7 @@ function ArticleDetails({article}) {
 }
 export default ArticleDetails;
 export async function getStaticPaths() {
-    const response = await fetch("http://localhost:3000/api/articles");
+    const response = await fetch("https://610510704b92a000171c5dfc.mockapi.io/articles");
     const data = await response.json();
     const paths = data.map(article => {
         return {
@@ -42,7 +42,7 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps(context) {
     const {params} = context
-    const response = await fetch(`http://localhost:3000/api/articles/${params.articleId}`);
+    const response = await fetch(`https://610510704b92a000171c5dfc.mockapi.io/articles/${params.articleId}`);
     const data = await response.json();
     return {
         props: {
