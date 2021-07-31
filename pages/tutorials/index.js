@@ -16,7 +16,7 @@ export default function Tutorials({tutorials}) {
                 Welcome to Tutorials page
             </h1>
             <div className={styles.grid}>
-                { tutorials.map((item) =>(<Link href={`/tutorials/${item.id}`}><a key={item.id} className={`${styles.card} ${styles.subcard}`}>
+                { tutorials.map((item) =>(<Link href={`/tutorials/${item.id}`} key={item.id}><a key={item.id} className={`${styles.card} ${styles.subcard}`}>
                     <h2>{item.name} &rarr;</h2>
                 </a></Link>)) }
           </div>

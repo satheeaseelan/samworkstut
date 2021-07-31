@@ -17,7 +17,7 @@ export default function Articles({ articles }) {
             </h1>
             
             <div className={styles.grid}>
-                { articles.map((item) =>(<Link href={`/articles/${item.id}`} ><a key={item.id} className={`${styles.card} ${styles.subcard}`}>
+                { articles.map((item) =>(<Link href={`/articles/${item.id}`} key={item.id}><a key={item.id} className={`${styles.card} ${styles.subcard}`}>
                     <h2>{item.name} &rarr;</h2>
                 </a></Link>)) }
           </div>
