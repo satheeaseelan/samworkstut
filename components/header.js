@@ -16,10 +16,10 @@ export default function Header(props) {
         }
     }
     useEffect(async () => {
-        const articlesresponse = await fetch("http://localhost:4000/articles");
+        const articlesresponse = await fetch("http://localhost:3000/api/articles");
         const articlesdata = await articlesresponse.json();
         setArticlelist(articlesdata);
-        const tutorialsresponse = await fetch("http://localhost:4000/tutorials");
+        const tutorialsresponse = await fetch("http://localhost:3000/api/tutorials");
         const tutorialsdata = await tutorialsresponse.json();
         setTutoriallist(tutorialsdata);
     }, [])

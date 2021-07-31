@@ -27,7 +27,7 @@ export default function Tutorials({tutorials}) {
     </div>)
 }
 export async function getStaticProps() {
-    const response = await fetch("http://localhost:4000/tutorials");
+    const response = await fetch("http://localhost:3000/api/tutorials");
     const data = await response.json();
     return {
         props: {

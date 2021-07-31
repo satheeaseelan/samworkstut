@@ -28,7 +28,7 @@ export default function Articles({ articles }) {
     </div>)
 }
 export async function getStaticProps() {
-    const response = await fetch("http://localhost:4000/articles");
+    const response = await fetch("http://localhost:3000/api/articles");
     const data = await response.json();
     return {
         props: {
